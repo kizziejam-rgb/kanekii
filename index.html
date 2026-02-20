@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KIZZIE</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #810100;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .box {
+            background-color: white;
+            width: 700px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            gap: 15px;
+            border-radius: 30px;
+            height: auto;
+        }
+
+        h1 {
+            font-family: 'EB Garamond', serif;
+            font-size: 55px;
+            font-weight: 800;
+            color: #810100;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: scaleX(0.8);
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .welcome-text {
+            font-size: 45px;
+            text-align: center;
+        }
+
+        .info-text {
+            font-family: 'EB Garamond', serif;
+            font-size: 35px; 
+            font-weight: 800;
+            color: #810100;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: scaleX(0.8);
+            text-align: center;
+            line-height: 1.1;
+            margin: 0;
+            display: block;
+        }
+
+        .divider {
+            width: 505px; 
+            height: auto;
+            background: transparent;
+            margin: 5px 0;
+        }
+
+        .divider-large {
+            width: 450px; 
+            height: auto;
+            background: transparent;
+        }
+
+        .routine-text {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #810100;
+            text-transform: uppercase;
+            margin: 0;
+            text-align: center;
+        }
+
+        ol, ul {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            color: black;
+            text-align: center;
+            list-style-position: inside;
+            padding: 0;
+            margin: 5px 0 0 0;
+            width: 100%;
+        }
+
+        ol li, ul li {
+            margin-bottom: 8px;
+        }
+
+        ol li a, ul li a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        ol li a:hover, ul li a:hover {
+            color: #810100;
+            text-decoration: underline;
+        }
+
+        .btn {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #810100;
+            color: white;
+            border: none;
+            width: 505px; 
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: 400;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .italic-subtext {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-style: italic;
+            color: black;
+            margin-top: 5px;
+        }
+
+        #revealedText {
+            font-size: 14px;
+            display: none;
+        }
+
+        .forget-text {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .kaneki-gif {
+            width: 400px;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .ghoul-media {
+            border: 8px solid #810100;
+            border-radius: 0;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="section-one" class="box">
+        <h1>ARE YOU HUMAN?</h1>
+        <button id="yesBtn" class="btn" onclick="hideYes()">Yes</button>
+        <button id="noBtn" class="btn" onclick="goToSection('section-two')">No</button>
+        <p id="revealedText" class="italic-subtext">No, you aren’t.</p>
+    </div>
+
+    <div id="section-two" class="box hidden">
+        <h1 class="welcome-text">WELCOME, KANEKI KEN.</h1>
+        <img src="kaneki.gif" alt="Kaneki Ken" class="kaneki-gif">
+        <p class="italic-subtext forget-text">You must forget what you know about yourself.</p>
+        <button class="btn" onclick="goToSection('section-three')">...Huh?</button>
+    </div>
+
+    <div id="section-three" class="box hidden">
+        <h1 class="info-text">THE FOLLOWING IS WHAT YOU<br>KNOW ABOUT BEING HUMAN.</h1>
+        <img src="tg divider.png" alt="Divider" class="divider">
+        <p class="routine-text">YOUR MORNING ROUTINE</p>
+        
+        <ol>
+            <li><a href="https://health.clevelandclinic.org/reasons-to-take-a-bath" target="_blank">Take a bath</a></li>
+            <li><a href="https://coveteur.com/body-skincare-routine" target="_blank">Do my body & skin care</a></li>
+            <li><a href="https://medium.com/the-science-scholar/unform-the-uniform-under-the-new-normal-bcd2e6da8285" target="_blank">Get dressed</a></li>
+            <li><a href="https://www.loveandlemons.com/healthy-lunch-ideas/" target="_blank">Eat lunch</a></li>
+            <li><a href="https://www.bowlanedental.com/blog/reasons-brush-your-teeth" target="_blank">Brush my teeth</a></li>
+            <li><a href="https://www.cocogen.com/safety-precautions-when-you-leave-your-home-empty" target="_blank">Leave home</a></li>
+        </ol>
+
+        <img src="tg divider 2.png" alt="Divider 2" class="divider-large">
+        <p class="routine-text">YOUR FAVORITE FILIPINO DISHES</p>
+        
+        <ul style="margin-bottom: 10px;">
+            <li><a href="https://panlasangpinoy.com/filipino-style-chicken-curry-knr-mm/" target="_blank">Chicken Curry</a></li>
+            <li><a href="https://panlasangpinoy.com/crispy-fried-chicken-recipe/" target="_blank">Fried Chicken</a></li>
+            <li><a href="https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/" target="_blank">Sinigang na Hipon</a></li>
+        </ul>
+
+        <button class="btn" onclick="goToSection('section-four')">But I’m completely fine—a <i>human</i>!</button>
+    </div>
+
+    <div id="section-four" class="box hidden">
+        <h1>ARE YOU SURE?</h1>
+        <video width="500" controls class="ghoul-media">
+            <source src="not human.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="btn" style="margin-top: 20px;" onclick="goToSection('section-five')">
+            That didn’t actually happen, <i>did it</i>...?
+        </button>
+    </div>
+
+    <div id="section-five" class="box hidden">
+        <h1>YOU’RE A GHOUL.</h1>
+        <img src="maybe human.gif" alt="Maybe Human" width="500" class="ghoul-media">
+        <audio controls style="width: 500px; margin-top: 20px;">
+            <source src="tg opening.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        function hideYes() {
+            document.getElementById('yesBtn').classList.add('hidden');
+            document.getElementById('revealedText').style.display = 'block';
+        }
+
+        function goToSection(sectionId) {
+            const videos = document.querySelectorAll('video');
+            const audios = document.querySelectorAll('audio');
+            
+            videos.forEach(v => {
+                v.pause();
+                v.currentTime = 0;
+            });
+            
+            audios.forEach(a => {
+                a.pause();
+                a.currentTime = 0; 
+            });
+
+            document.querySelectorAll('.box').forEach(box => box.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
